@@ -1,0 +1,3 @@
+# Union Intersection
+
+The union of two sets A and B is the set of elements which are in A, in B, or in both A and B. The intersection of two sets A and B, denoted by A ∩ B, is the set of all objects that are members of both the sets A and B. For the union and intersection functions, I created two hash tables for both linked lists to find the number of times in which each node occurred. I then compared the two hash tables and took the union and intersection between the two. Both operations had a time efficiency of O(n^2) and a space complexity of O(n).

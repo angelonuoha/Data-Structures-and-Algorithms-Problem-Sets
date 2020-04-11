@@ -1,0 +1,3 @@
+# File Recursion
+
+For each directory, I used os.listdir to list out all of the subdirectories or files. Then, for each item in that list, I created a new path and called a recursive function with the new path because there were no limits on how many subdirectories belonged to each directory. Since I called the recursive function within a for loop on each item in the subdirectories list, this led to a time efficiency of O(n^2) and space complexity of O(n) as I stored the result in one array.

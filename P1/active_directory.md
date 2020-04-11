@@ -1,0 +1,3 @@
+# Active Directory
+
+In Windows Active Directory, a group can consist of user(s) and group(s) themselves. We can construct this hierarchy as such. Where User is represented by str representing their ids. Since the number of sub groups within each group is not limited, I used a recursive function to check the users array within each group. This function has a time efficiency of O(n^2) and O(1) space complexity as no data was saved to memory.

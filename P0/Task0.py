@@ -1,4 +1,12 @@
-arr = [1, 2, 3]
+arr = [9, 8, 9, 8]
+i = 2
+output = [[], [8]]
 
-for item in arr[-1: -2]:
-    print(item)
+current = []
+current.append(arr[i])
+print(current)
+current.extend([])
+print(output)
+print(current)
+output.append(current)
+print(output)
