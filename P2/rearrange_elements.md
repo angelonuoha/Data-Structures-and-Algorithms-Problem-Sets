@@ -1,0 +1,3 @@
+# Rearrange Array Elements
+
+In order to find the two numbers with the greatest sum, I used the Merge Sort algorithm to sort the array from the highest to lowest values. With the reverse sorted array, I traversed through the list twice and created the first integer with every number at an even index and the second integer with every number at an odd index. This algorithm has a time efficiency that simplifies to O(nlog(n)) and a space complexity of O(n).
