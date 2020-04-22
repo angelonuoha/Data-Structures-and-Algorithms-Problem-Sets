@@ -12,7 +12,7 @@ def get_min_max(ints):
        ints(list): list of integers containing one or more integers
     """
     if len(ints) <= 0:
-        return None
+        return ()
     elif len(ints) == 1:
         return (ints[0], ints[0])
 
@@ -36,6 +36,9 @@ test_1 = [i for i in range(0, 10)]  # a list containing 0 - 9
 test_2 = [i for i in range(10, 100)]  # a list containing 10 - 99
 test_3 = [i for i in range(100, 1000)]  # a list containing 100 - 999
 test_4 = [i for i in range(0, 2)]  # a list containing 0 - 1
+test_5 = [i for i in range(0)]  # an empty list
+test_6 = [i for i in range(1)]  # a list containing one value
+
 random.shuffle(test_1)
 random.shuffle(test_2)
 random.shuffle(test_3)
@@ -45,3 +48,6 @@ print ("Pass" if ((0, 9) == get_min_max(test_1)) else "Fail")
 print ("Pass" if ((10, 99) == get_min_max(test_2)) else "Fail")
 print ("Pass" if ((100, 999) == get_min_max(test_3)) else "Fail")
 print ("Pass" if ((0, 1) == get_min_max(test_4)) else "Fail")
+print ("Pass" if (() == get_min_max(test_5)) else "Fail")
+print ("Pass" if ((0,0) == get_min_max(test_6)) else "Fail")
+

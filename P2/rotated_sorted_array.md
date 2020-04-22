@@ -1,3 +1,3 @@
 # Search in a Rotated Sorted Array
 
-To search the rotated sorted array, I found the index at which the array was pivoted using a binary search algorithm and then narrowed down the search to a subarray within the larger sorted array. This algorithm has a time efficiency of O(log(n)) and space complexity of O(1).
+To search the rotated sorted array, I found the index at which the array was pivoted using a binary search algorithm and then narrowed down the search to a subarray within the larger sorted array. This algorithm has a time efficiency of O(log(n)). Since I used only temporary variables, the amount of memory needed did not vary depending on the input size; thus leading to a space complexity of O(1).

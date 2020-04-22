@@ -7,8 +7,7 @@ class RouteTrie:
 
 
     def insert(self, path, handler):
-        # Similar to our previous example you will want to recursively add nodes
-        # Make sure you assign the handler to only the leaf (deepest) node of this path
+        # Recursively add nodes
         current_node = self.root
         for path_block in path:
             current_node.insert(path_block)
@@ -45,24 +44,17 @@ class RouteTrieNode:
 class Router:
     def __init__(self, root_handler, non_found_handler):
         # Create a new RouteTrie for holding our routes
-        # You could also add a handler for 404 page not found responses as well!
         self.router = RouteTrie(root_handler)
         self.non_found_handler = non_found_handler
 
     def add_handler(self, raw_path, handler):
         # Add a handler for a path
-        # You will need to split the path and pass the pass parts
-        # as a list to the RouteTrie
         path = self.split_path(raw_path)
         self.router.insert(path, handler)
 
 
     def lookup(self, raw_path):
         # lookup path (by parts) and return the associated handler
-        # you can return None if it's not found or
-        # return the "not found" handler if you added one
-        # bonus points if a path works with and without a trailing slash
-        # e.g. /about and /about/ both return the /about handler
         path = self.split_path(raw_path)
         if len(path) <= 0:
             return self.router.handler
@@ -73,13 +65,9 @@ class Router:
             return self.router.find(path)
 
     def split_path(self, raw_path):
-        # you need to split the path into parts for 
-        # both the add_handler and loopup functions,
-        # so it should be placed in a function here
+        # split the path into parts for both the add_handler and loopup functions,
         result_temp = raw_path.split('/')
         return [element for element in result_temp if element != '']
-
-# Here are some test cases and expected outputs you can use to test your implementation
 
 # create the router and add a route
 router = Router("root handler", "not found handler") # remove the 'not found handler' if you did not implement this

@@ -21,6 +21,8 @@ def sqrt(number):
     # Return the number if it is 0 or 1
     if number == 0 or number == 1:
        return number
+    elif number < 0:
+       return None
 
     bottom_val = 0
     top_val = number
@@ -44,6 +46,7 @@ print ("Pass" if  (0 == sqrt(0)) else "Fail")
 print ("Pass" if  (4 == sqrt(16)) else "Fail")
 print ("Pass" if  (1 == sqrt(1)) else "Fail")
 print ("Pass" if  (5 == sqrt(27)) else "Fail")
+print ("Pass" if  (None == sqrt(-2)) else "Fail")
 
 # 'Fail' Test Cases
 print ("Pass" if  (5 != sqrt(16)) else "Fail")

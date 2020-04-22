@@ -18,4 +18,4 @@ We can also simplify our RouteTrie a bit by excluding the suffixes method and th
 
 Next we need to implement the actual Router. The router will initialize itself with a RouteTrie for holding routes and associated handlers. It should also support adding a handler by path and looking up a handler by path. All of these operations will be delegated to the RouteTrie.
 
-The time and space efficiency of this algorithm is O(n) because it is dependent on the length of path that we are searching.
+The time efficiency for searching and inserting from a trie data structure is O(n) because it is dependent on the length of path that we are searching or inputting. For space complexity, the worst case will be O(n) in the event that we have to create a new node for each path block that was split from the input.

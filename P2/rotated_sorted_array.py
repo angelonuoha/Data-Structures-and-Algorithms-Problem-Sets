@@ -21,6 +21,8 @@ def rotated_array_search(input_list, number):
     Returns:
        int: Index or -1
     """
+    if len(input_list) <= 0:
+        return -1
     bottom = 0
     top = len(input_list) - 1
     pivot_point = 0
@@ -29,6 +31,7 @@ def rotated_array_search(input_list, number):
         return 0
     elif number == input_list[top]:
         return top
+    
 
     while bottom <= top:
         pivot_point = (bottom + top) // 2
@@ -90,6 +93,7 @@ test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 1])
 test_function([[6, 7, 8, 1, 2, 3, 4], 8])
 test_function([[6, 7, 8, 1, 2, 3, 4], 1])
 test_function([[6, 7, 8, 1, 2, 3, 4], 10])
+test_function([[], 10])
 
 test_function([[600, 700, 800, 100, 200, 300, 400], 80])
 test_function([[600, 700, 800, 100, 200, 300, 400], 800])

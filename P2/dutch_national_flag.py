@@ -16,22 +16,18 @@ def sort_012(input_list):
     left_0 = 0
     right_2 = len(input_list) - 1
 
-    while index < len(input_list):
+    while index <= right_2:
         if input_list[index] == 0:
             input_list[index] = input_list[left_0]
             input_list[left_0] = 0
             left_0 += 1
-        index += 1
-    
-    index = len(input_list) - 1
-
-    while index >= 0:
-        if input_list[index] == 2:
+            index += 1
+        elif input_list[index] == 2:
             input_list[index] = input_list[right_2]
             input_list[right_2] = 2
             right_2 -= 1
-           
-        index -= 1
+        else:
+            index += 1
 
     return input_list
 
